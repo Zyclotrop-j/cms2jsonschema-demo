@@ -1,32 +1,22 @@
-# JSON Forms React seed App
+# CMS 2 JSON-Forms DEMO
 
-This seed demonstrates how to use [JSON Forms](https://jsonforms.io) with React in order to render a simple form for displaying a task entity.
+TL;DR:
+- Run `npm install`
+- Run `npm run dev`
 
-It is based on `create-react-app` and only contains minor modifications.
+## Demo
 
-- Execute `npm ci` to install the prerequisites. If you want to have the latest released versions use `npm install`.
-- Execute `npm run build` to build the application.
-- Execute `npm start` to start the application.
+Open localhost:3000
 
-Browse to http://localhost:3000 to see the application in action.
+Use the editor on the left to modify your ui schema. Apply it to the form-engine using the "Apply to CMS" button at the top.
 
-## File Structure
+You can change the underlaying data schema (json schema) by modifing the according file.
 
-Let's briefly have a look at the most important files:
+You can see the current, underlaying schemas and data at the bottom any time.
 
-- `src/schema.json` contains the JSON schema (also referred to as 'data schema')
-- `src/uischema.json` contains the UI schema
-- `src/main.tsx` is the entry point of the application. We also customize the Material UI theme to give each control more space.
-- `src/App.tsx` is the main app component and makes use of the `JsonForms` component in order to render a form.
+## Purpose
 
-The [data schema](src/schema.json) defines the structure of a Task: it contains attributes such as title, description, due date and so on.
+This demo shows how easy it is to hook up a json-forms based form engine to a WYSIWYG editor such as craftjs forming a CMS that has a visual editing interface (incl. drag-and-drop) while allowing an independend render process based on dynamic file apis.
 
-The [corresponding UI schema](src/uischema.json) specifies controls for each property and puts them into a vertical layout that in turn contains two horizontal layouts.
+Note that in a real scenario you'd reuse your json-forms components (allowing visual parity during editing) rather than writing them again like in this example.
 
-## Rendering JSON Forms
-
-JSON Forms is rendered by importing and using the `JsonForms` component and directly handing over the `schema`, `uischema`, `data`, `renderer` and `cell` props. We listen to changes in the form via the `onChange` callback.
-
-## Custom renderers
-
-Please see [our corresponding tutorial](https://jsonforms.io/docs/tutorial) on how to add custom renderers.
