@@ -3,6 +3,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [react()],
+  base: process.env.CI ? '/cms2jsonschema-demo' : '/',
   build: {
     outDir: 'build',
   },
