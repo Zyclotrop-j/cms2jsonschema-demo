@@ -6,6 +6,10 @@ TL;DR:
 
 ## Demo
 
+https://zyclotrop-j.github.io/cms2jsonschema-demo/
+
+## Local Demo
+
 Open localhost:3000
 
 Use the editor on the left to modify your ui schema. Apply it to the form-engine using the "Apply to CMS" button at the top.
